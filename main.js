@@ -11,15 +11,14 @@ const hole = "O";
 const fieldCharacter = "░";
 const pathCharacter = "*";
 
+//ใช้ class เป็น template เพื่อสร้าง object ต่างๆในเกมแบบซ้ำๆ//
 class Field {
 	constructor(field = [[]]) {
 		this.field = field;
-
-		// Replace with your own code //
-		// Set the home position at (0, 0) before the game starts
-		this.positionRow = 0;
-		this.positionCol = 0;
-		this.field[this.positionRow][this.positionCol] = pathCharacter;
+		// Set the start position at (0, 0)
+		this.posX = 0;
+		this.posY = 0;
+		this.field[this.posX][this.posY] = pathCharacter;
 	}
 
 	// Print field //
